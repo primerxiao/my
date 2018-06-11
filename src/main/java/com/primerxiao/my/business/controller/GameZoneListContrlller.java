@@ -1,15 +1,11 @@
-package com.primerxiao.my.backstage.controller;
+package com.primerxiao.my.business.controller;
 
-import com.primerxiao.my.backstage.dao.CqActionRepository;
-import com.primerxiao.my.backstage.entity.TbGameZoneList;
-import com.primerxiao.my.backstage.entity.game.GameCqAction;
-import com.primerxiao.my.backstage.service.IGameZoneListService;
-import com.primerxiao.my.common.utils.EDCodeUtil;
+import com.primerxiao.my.business.entity.TbGameZoneList;
+import com.primerxiao.my.business.service.IGameZoneListService;
+import com.primerxiao.my.common.service.IBaseService;
+import com.primerxiao.my.gametarget.entity.CqAction;
+import com.primerxiao.my.gametarget.service.IGameTargetService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.UnsupportedEncodingException;
@@ -21,17 +17,17 @@ import java.util.List;
 @RequestMapping("/gameZoneList")
 public class GameZoneListContrlller {
 
+
     @Autowired
     private IGameZoneListService gameZoneListService;
 
-
     @Autowired
-    private CqActionRepository cqActionRepository;
+    private IGameTargetService gameTargetService;
 
     @RequestMapping("/search")
     public String search(@RequestParam(value = "id", required = false) Integer id) throws UnsupportedEncodingException {
 
-        return this.gameZoneListService.getOne(id).toString();
+        return this.gameTargetService.findById(id).toString();
     }
 
     @RequestMapping("/getAll")
@@ -106,7 +102,7 @@ public class GameZoneListContrlller {
         return allById;
     }
 
-    @RequestMapping(value = "/test")
+/*    @RequestMapping(value = "/test")
 
     public List<GameCqAction> test(@PageableDefault(value = 15, sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) throws UnsupportedEncodingException, IllegalAccessException, NoSuchFieldException {
         // List<GameCqAction> all = this.gameZoneListService.findAll();
@@ -119,6 +115,6 @@ public class GameZoneListContrlller {
         }
         EDCodeUtil.setDCode(content);
         return content;
-    }
+    }*/
 
 }

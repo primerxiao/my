@@ -1,16 +1,11 @@
-package com.primerxiao.my.backstage.service.impl;
+package com.primerxiao.my.business.service.impl;
 
 
-import com.primerxiao.my.backstage.dao.CqActionRepository;
-import com.primerxiao.my.backstage.dao.GameZoneListRepository;
-
-import com.primerxiao.my.backstage.entity.TbGameZoneList;
-import com.primerxiao.my.backstage.entity.game.GameCqAction;
-import com.primerxiao.my.backstage.service.IGameZoneListService;
+import com.primerxiao.my.business.dao.GameZoneListRepository;
+import com.primerxiao.my.business.entity.TbGameZoneList;
+import com.primerxiao.my.business.service.IGameZoneListService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -23,8 +18,6 @@ import java.util.Optional;
 public class GameZoneListService implements IGameZoneListService {
     @Autowired
     private GameZoneListRepository gameZoneListRepository;
-    @Autowired
-    private CqActionRepository cqActionRepository;
 
     /**
      * 根据主键查询出对象
@@ -47,10 +40,7 @@ public class GameZoneListService implements IGameZoneListService {
         return this.gameZoneListRepository.save(po);
     }
 
-    @Override
-    public GameCqAction insert(GameCqAction cqAction) {
-        return this.cqActionRepository.save(cqAction);
-    }
+
 
     @Override
     public void flush() {
@@ -83,13 +73,7 @@ public class GameZoneListService implements IGameZoneListService {
         return this.gameZoneListRepository.findAllById(tbGameZoneLists);
     }
 
-    @Override
-    public List<GameCqAction> findAll() {
-        long count = this.cqActionRepository.count();
-        System.out.println(count);
-        //return this.cqActionRepository.findAll();
-        return null;
-    }
+
 
 
 }

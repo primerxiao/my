@@ -1,4 +1,4 @@
-package com.primerxiao.my.backstage.controller;
+package com.primerxiao.my.business.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

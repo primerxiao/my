@@ -1,31 +1,25 @@
-package com.primerxiao.my.backstage.entity.game;
-
-import com.primerxiao.my.common.annotation.EDCode;
+package com.primerxiao.my.gametarget.entity;
 
 import javax.persistence.*;
-import java.math.BigInteger;
 import java.util.Objects;
 
-@EDCode
 @Entity
-@Table(name = "cq_action", schema = "business")
-public class GameCqAction {
-    private BigInteger id;
+@Table(name = "cq_action", schema = "newdb2")
+public class CqAction {
+    private int id;
     private int idNext;
     private int idNextfail;
     private int type;
     private int data;
-    @EDCode
     private String param;
-    private Integer idNextFail;
 
     @Id
     @Column(name = "id")
-    public BigInteger getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(BigInteger id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -79,39 +73,34 @@ public class GameCqAction {
         this.param = param;
     }
 
-    @Basic
-    @Column(name = "id_next_fail")
-    public Integer getIdNextFail() {
-        return idNextFail;
-    }
-
-    public void setIdNextFail(Integer idNextFail) {
-        this.idNextFail = idNextFail;
-    }
-
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-
-            return false;
-        }
-        GameCqAction that = (GameCqAction) o;
-        return id == that.id &&
-                idNext == that.idNext &&
-                idNextfail == that.idNextfail &&
-                type == that.type &&
-                data == that.data &&
-                Objects.equals(param, that.param) &&
-                Objects.equals(idNextFail, that.idNextFail);
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CqAction cqAction = (CqAction) o;
+        return id == cqAction.id &&
+                idNext == cqAction.idNext &&
+                idNextfail == cqAction.idNextfail &&
+                type == cqAction.type &&
+                data == cqAction.data &&
+                Objects.equals(param, cqAction.param);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, idNext, idNextfail, type, data, param, idNextFail);
+        return Objects.hash(id, idNext, idNextfail, type, data, param);
+    }
+
+    @Override
+    public String toString() {
+        return "CqAction{" +
+                "id=" + id +
+                ", idNext=" + idNext +
+                ", idNextfail=" + idNextfail +
+                ", type=" + type +
+                ", data=" + data +
+                ", param='" + param + '\'' +
+                '}';
     }
 }

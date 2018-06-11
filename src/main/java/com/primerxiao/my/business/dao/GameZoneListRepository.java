@@ -1,10 +1,8 @@
-package com.primerxiao.my.backstage.dao;
+package com.primerxiao.my.business.dao;
 
 
-import com.primerxiao.my.backstage.entity.TbGameZoneList;
+import com.primerxiao.my.business.entity.TbGameZoneList;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.ArrayList;
 
 /**
  * @author primerxiao

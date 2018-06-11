@@ -1,4 +1,4 @@
-package com.primerxiao.my.backstage.entity;
+package com.primerxiao.my.business.entity;
 
 import com.primerxiao.my.common.Entity.EntityParent;
 import com.primerxiao.my.common.annotation.EDCode;

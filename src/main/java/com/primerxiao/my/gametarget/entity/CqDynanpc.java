@@ -1,39 +1,39 @@
-package com.primerxiao.my.backstage.entity.game;
+package com.primerxiao.my.gametarget.entity;
 
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "cq_npc", schema = "business")
-public class GameCqNpc {
+@Table(name = "cq_dynanpc", schema = "newdb2")
+public class CqDynanpc {
     private int id;
-    private Integer ownerid;
-    private Integer playerid;
+    private int ownerid;
+    private byte ownertype;
     private String name;
-    private Integer type;
-    private Integer lookface;
+    private short type;
+    private int lookface;
     private byte length;
     private byte fat;
-    private Integer idxserver;
-    private Integer mapid;
-    private Integer cellx;
-    private Integer celly;
-    private Integer task0;
-    private Integer task1;
-    private Integer task2;
-    private Integer task3;
-    private Integer task4;
-    private Integer task5;
-    private Integer task6;
-    private Integer task7;
+    private byte idxserver;
+    private int mapid;
+    private short cellx;
+    private short celly;
+    private int task0;
+    private int task1;
+    private int task2;
+    private int task3;
+    private int task4;
+    private int task5;
+    private int task6;
+    private int task7;
     private int data0;
     private int data1;
     private int data2;
     private int data3;
     private String datastr;
     private int linkid;
-    private short life;
-    private short maxlife;
+    private int life;
+    private int maxlife;
     private int base;
     private short sort;
     private int itemid;
@@ -66,22 +66,22 @@ public class GameCqNpc {
 
     @Basic
     @Column(name = "ownerid")
-    public Integer getOwnerid() {
+    public int getOwnerid() {
         return ownerid;
     }
 
-    public void setOwnerid(Integer ownerid) {
+    public void setOwnerid(int ownerid) {
         this.ownerid = ownerid;
     }
 
     @Basic
-    @Column(name = "playerid")
-    public Integer getPlayerid() {
-        return playerid;
+    @Column(name = "ownertype")
+    public byte getOwnertype() {
+        return ownertype;
     }
 
-    public void setPlayerid(Integer playerid) {
-        this.playerid = playerid;
+    public void setOwnertype(byte ownertype) {
+        this.ownertype = ownertype;
     }
 
     @Basic
@@ -96,21 +96,21 @@ public class GameCqNpc {
 
     @Basic
     @Column(name = "type")
-    public Integer getType() {
+    public short getType() {
         return type;
     }
 
-    public void setType(Integer type) {
+    public void setType(short type) {
         this.type = type;
     }
 
     @Basic
     @Column(name = "lookface")
-    public Integer getLookface() {
+    public int getLookface() {
         return lookface;
     }
 
-    public void setLookface(Integer lookface) {
+    public void setLookface(int lookface) {
         this.lookface = lookface;
     }
 
@@ -136,121 +136,121 @@ public class GameCqNpc {
 
     @Basic
     @Column(name = "idxserver")
-    public Integer getIdxserver() {
+    public byte getIdxserver() {
         return idxserver;
     }
 
-    public void setIdxserver(Integer idxserver) {
+    public void setIdxserver(byte idxserver) {
         this.idxserver = idxserver;
     }
 
     @Basic
     @Column(name = "mapid")
-    public Integer getMapid() {
+    public int getMapid() {
         return mapid;
     }
 
-    public void setMapid(Integer mapid) {
+    public void setMapid(int mapid) {
         this.mapid = mapid;
     }
 
     @Basic
     @Column(name = "cellx")
-    public Integer getCellx() {
+    public short getCellx() {
         return cellx;
     }
 
-    public void setCellx(Integer cellx) {
+    public void setCellx(short cellx) {
         this.cellx = cellx;
     }
 
     @Basic
     @Column(name = "celly")
-    public Integer getCelly() {
+    public short getCelly() {
         return celly;
     }
 
-    public void setCelly(Integer celly) {
+    public void setCelly(short celly) {
         this.celly = celly;
     }
 
     @Basic
     @Column(name = "task0")
-    public Integer getTask0() {
+    public int getTask0() {
         return task0;
     }
 
-    public void setTask0(Integer task0) {
+    public void setTask0(int task0) {
         this.task0 = task0;
     }
 
     @Basic
     @Column(name = "task1")
-    public Integer getTask1() {
+    public int getTask1() {
         return task1;
     }
 
-    public void setTask1(Integer task1) {
+    public void setTask1(int task1) {
         this.task1 = task1;
     }
 
     @Basic
     @Column(name = "task2")
-    public Integer getTask2() {
+    public int getTask2() {
         return task2;
     }
 
-    public void setTask2(Integer task2) {
+    public void setTask2(int task2) {
         this.task2 = task2;
     }
 
     @Basic
     @Column(name = "task3")
-    public Integer getTask3() {
+    public int getTask3() {
         return task3;
     }
 
-    public void setTask3(Integer task3) {
+    public void setTask3(int task3) {
         this.task3 = task3;
     }
 
     @Basic
     @Column(name = "task4")
-    public Integer getTask4() {
+    public int getTask4() {
         return task4;
     }
 
-    public void setTask4(Integer task4) {
+    public void setTask4(int task4) {
         this.task4 = task4;
     }
 
     @Basic
     @Column(name = "task5")
-    public Integer getTask5() {
+    public int getTask5() {
         return task5;
     }
 
-    public void setTask5(Integer task5) {
+    public void setTask5(int task5) {
         this.task5 = task5;
     }
 
     @Basic
     @Column(name = "task6")
-    public Integer getTask6() {
+    public int getTask6() {
         return task6;
     }
 
-    public void setTask6(Integer task6) {
+    public void setTask6(int task6) {
         this.task6 = task6;
     }
 
     @Basic
     @Column(name = "task7")
-    public Integer getTask7() {
+    public int getTask7() {
         return task7;
     }
 
-    public void setTask7(Integer task7) {
+    public void setTask7(int task7) {
         this.task7 = task7;
     }
 
@@ -316,21 +316,21 @@ public class GameCqNpc {
 
     @Basic
     @Column(name = "life")
-    public short getLife() {
+    public int getLife() {
         return life;
     }
 
-    public void setLife(short life) {
+    public void setLife(int life) {
         this.life = life;
     }
 
     @Basic
     @Column(name = "maxlife")
-    public short getMaxlife() {
+    public int getMaxlife() {
         return maxlife;
     }
 
-    public void setMaxlife(short maxlife) {
+    public void setMaxlife(int maxlife) {
         this.maxlife = maxlife;
     }
 
@@ -526,67 +526,61 @@ public class GameCqNpc {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-
-            return false;
-        }
-        GameCqNpc gameCqNpc = (GameCqNpc) o;
-        return id == gameCqNpc.id &&
-                length == gameCqNpc.length &&
-                fat == gameCqNpc.fat &&
-                data0 == gameCqNpc.data0 &&
-                data1 == gameCqNpc.data1 &&
-                data2 == gameCqNpc.data2 &&
-                data3 == gameCqNpc.data3 &&
-                linkid == gameCqNpc.linkid &&
-                life == gameCqNpc.life &&
-                maxlife == gameCqNpc.maxlife &&
-                base == gameCqNpc.base &&
-                sort == gameCqNpc.sort &&
-                itemid == gameCqNpc.itemid &&
-                sizeFront == gameCqNpc.sizeFront &&
-                sizeBack == gameCqNpc.sizeBack &&
-                sizeLeft == gameCqNpc.sizeLeft &&
-                sizeRight == gameCqNpc.sizeRight &&
-                defence == gameCqNpc.defence &&
-                magicDef == gameCqNpc.magicDef &&
-                initialPrice == gameCqNpc.initialPrice &&
-                price == gameCqNpc.price &&
-                deposit == gameCqNpc.deposit &&
-                buyRatio == gameCqNpc.buyRatio &&
-                feeType == gameCqNpc.feeType &&
-                incomeValue == gameCqNpc.incomeValue &&
-                preferential == gameCqNpc.preferential &&
-                harvestDate == gameCqNpc.harvestDate &&
-                Objects.equals(ownerid, gameCqNpc.ownerid) &&
-                Objects.equals(playerid, gameCqNpc.playerid) &&
-                Objects.equals(name, gameCqNpc.name) &&
-                Objects.equals(type, gameCqNpc.type) &&
-                Objects.equals(lookface, gameCqNpc.lookface) &&
-                Objects.equals(idxserver, gameCqNpc.idxserver) &&
-                Objects.equals(mapid, gameCqNpc.mapid) &&
-                Objects.equals(cellx, gameCqNpc.cellx) &&
-                Objects.equals(celly, gameCqNpc.celly) &&
-                Objects.equals(task0, gameCqNpc.task0) &&
-                Objects.equals(task1, gameCqNpc.task1) &&
-                Objects.equals(task2, gameCqNpc.task2) &&
-                Objects.equals(task3, gameCqNpc.task3) &&
-                Objects.equals(task4, gameCqNpc.task4) &&
-                Objects.equals(task5, gameCqNpc.task5) &&
-                Objects.equals(task6, gameCqNpc.task6) &&
-                Objects.equals(task7, gameCqNpc.task7) &&
-                Objects.equals(datastr, gameCqNpc.datastr) &&
-                Objects.equals(ownerName, gameCqNpc.ownerName) &&
-                Objects.equals(defaultOwnerName, gameCqNpc.defaultOwnerName);
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CqDynanpc cqDynanpc = (CqDynanpc) o;
+        return id == cqDynanpc.id &&
+                ownerid == cqDynanpc.ownerid &&
+                ownertype == cqDynanpc.ownertype &&
+                type == cqDynanpc.type &&
+                lookface == cqDynanpc.lookface &&
+                length == cqDynanpc.length &&
+                fat == cqDynanpc.fat &&
+                idxserver == cqDynanpc.idxserver &&
+                mapid == cqDynanpc.mapid &&
+                cellx == cqDynanpc.cellx &&
+                celly == cqDynanpc.celly &&
+                task0 == cqDynanpc.task0 &&
+                task1 == cqDynanpc.task1 &&
+                task2 == cqDynanpc.task2 &&
+                task3 == cqDynanpc.task3 &&
+                task4 == cqDynanpc.task4 &&
+                task5 == cqDynanpc.task5 &&
+                task6 == cqDynanpc.task6 &&
+                task7 == cqDynanpc.task7 &&
+                data0 == cqDynanpc.data0 &&
+                data1 == cqDynanpc.data1 &&
+                data2 == cqDynanpc.data2 &&
+                data3 == cqDynanpc.data3 &&
+                linkid == cqDynanpc.linkid &&
+                life == cqDynanpc.life &&
+                maxlife == cqDynanpc.maxlife &&
+                base == cqDynanpc.base &&
+                sort == cqDynanpc.sort &&
+                itemid == cqDynanpc.itemid &&
+                sizeFront == cqDynanpc.sizeFront &&
+                sizeBack == cqDynanpc.sizeBack &&
+                sizeLeft == cqDynanpc.sizeLeft &&
+                sizeRight == cqDynanpc.sizeRight &&
+                defence == cqDynanpc.defence &&
+                magicDef == cqDynanpc.magicDef &&
+                initialPrice == cqDynanpc.initialPrice &&
+                price == cqDynanpc.price &&
+                deposit == cqDynanpc.deposit &&
+                buyRatio == cqDynanpc.buyRatio &&
+                feeType == cqDynanpc.feeType &&
+                incomeValue == cqDynanpc.incomeValue &&
+                preferential == cqDynanpc.preferential &&
+                harvestDate == cqDynanpc.harvestDate &&
+                Objects.equals(name, cqDynanpc.name) &&
+                Objects.equals(datastr, cqDynanpc.datastr) &&
+                Objects.equals(ownerName, cqDynanpc.ownerName) &&
+                Objects.equals(defaultOwnerName, cqDynanpc.defaultOwnerName);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, ownerid, playerid, name, type, lookface, length, fat, idxserver, mapid, cellx, celly, task0, task1, task2, task3, task4, task5, task6, task7, data0, data1, data2, data3, datastr, linkid, life, maxlife, base, sort, itemid, sizeFront, sizeBack, sizeLeft, sizeRight, defence, magicDef, ownerName, defaultOwnerName, initialPrice, price, deposit, buyRatio, feeType, incomeValue, preferential, harvestDate);
+        return Objects.hash(id, ownerid, ownertype, name, type, lookface, length, fat, idxserver, mapid, cellx, celly, task0, task1, task2, task3, task4, task5, task6, task7, data0, data1, data2, data3, datastr, linkid, life, maxlife, base, sort, itemid, sizeFront, sizeBack, sizeLeft, sizeRight, defence, magicDef, ownerName, defaultOwnerName, initialPrice, price, deposit, buyRatio, feeType, incomeValue, preferential, harvestDate);
     }
 }

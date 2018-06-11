@@ -1,8 +1,8 @@
-package com.primerxiao.my.backstage.service;
+package com.primerxiao.my.business.service;
 
 
-import com.primerxiao.my.backstage.entity.TbGameZoneList;
-import com.primerxiao.my.backstage.entity.game.GameCqAction;
+import com.primerxiao.my.business.entity.TbGameZoneList;
+
 
 import java.util.List;
 import java.util.Optional;
@@ -18,8 +18,6 @@ public interface IGameZoneListService {
 
     TbGameZoneList insert(TbGameZoneList tbGameZoneList1);
 
-    GameCqAction insert(GameCqAction cqAction);
-
     void flush();
 
     TbGameZoneList saveAndFlush(TbGameZoneList var1);
@@ -31,5 +29,4 @@ public interface IGameZoneListService {
 
     List<TbGameZoneList> findAllById();
 
-    List<GameCqAction> findAll();
 }
